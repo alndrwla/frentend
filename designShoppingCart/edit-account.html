@@ -8,7 +8,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-	<title>Create and Edit account</title>
+	<title>Edit account</title>
 	<style>
 		:root {
 			--white: #FFFFFF;
@@ -54,21 +54,10 @@
 			margin-bottom: 4px;
 		}
 
-		.input {
-			background-color: var(--text-input-field);
-			border: none;
-			border-radius: 8px;
-			height: 30px;
+		.value {
+			color: var(--very-light-pink);
 			font-size: var(--md);
-			padding: 6px;
-			margin-bottom: 12px;
-		}
-		.input-name,
-		.input-email,
-		.input-password {
-			font-size: var(--lg);
-			margin-bottom: 12px;
-			text-align: center;
+			margin: 8px 0 32px 0;
 		}
 
 		.title {
@@ -87,11 +76,11 @@
 			flex-direction: column;
 		}
 
-		.primary-button {
-			background-color: var(--hospital-green);
+		.secondary-button {
+			background-color: var(--white);
 			border-radius: 8px;
-			border: none;
-			color: var(--white);
+			border: 1px solid var(--hospital-green);
+			color: var(--hospital-green);
 			width: 100%;
 			cursor: pointer;
 			font-size: var(--md);
@@ -119,22 +108,22 @@
 <body>
 	<div class="login">
 		<div class="form-container">
-			<h1 class="title">Create account</h1>
+			<h1 class="title">Edit account</h1>
 
 			<form action="" class="form">
 				<div>
 					<label for="name" class="label">Name: </label>
-					<input type="text" id="name" class="input input-name" placeholder="Innovasoftware ">
+					<p class="value">Innovasoftware</p>
 
 					<label for="email" class="label">Email: </label>
-					<input type="text" id="email" class="input input-email" placeholder="innovasoftware@gmail.com">
+					<p class="value">innovasoftwarecompany@gmail.com</p>
 
 					<label for="password" class="label">Password</label>
-					<input type="password" id="password" class="input password" placeholder="*********">
+					<p class="value">**********</p>
 
 				</div>
 
-				<input type="submit" value="Create" class="primary-button login-button">
+				<input type="submit" value="Create" class="secondary-button login-button">
 			</form>
 		</div>
 	</div>
