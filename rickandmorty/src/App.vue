@@ -18,6 +18,7 @@
 <script>
 import axios from 'axios'
 import Character from './components/Character.vue'
+import configService from './services/config'
 
 function data() {
 	return {
@@ -30,7 +31,7 @@ function created() {
 }
 
 function getData() {
-	axios.get('https://rickandmortyapi.com/api/character/')
+	axios.get(configService.apiUrl+'character')
 	.then((response) =>{
 		this.characters = response.data.results;
 	})
